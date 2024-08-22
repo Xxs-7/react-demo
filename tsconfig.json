@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "sourceMap": true,
+    "allowJs": true,
+
+    /* Bundler mode */
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "outDir": "dist",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "downlevelIteration": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "react": ["node_modules/@types/react"]
+    },
+    "types": ["vite-plugin-svgr/client"],
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src", "typed-css.d.ts"],
+  "exclude": ["node_modules"]
+}

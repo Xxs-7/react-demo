@@ -1,0 +1,8 @@
+{
+    "presets": ["@babel/preset-env"],
+    "plugins": [
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        ["@babel/plugin-proposal-class-properties", { "loose": false }],
+        ["@babel/plugin-transform-private-methods", { "loose": false }] // 需要使用私有属性或者方法 loose改为true
+    ]
+}

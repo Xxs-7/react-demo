@@ -1,0 +1,19 @@
+/* .simplebar-vertical {
+  width: 20px;
+} */
+
+/* .simplebar-track {
+  background-color: red;
+  width: 10px;
+  transform: scale(1.2);
+} */
+
+/* .simplebar-scrollbar {
+  cursor: pointer;
+}
+    */
+
+.simplebar-scrollbar::before {
+  /* transform: scaleX(1.2); */
+  background: green;
+}

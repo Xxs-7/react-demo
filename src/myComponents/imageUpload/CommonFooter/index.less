@@ -1,0 +1,57 @@
+.idea-post-footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  button {
+    box-sizing: border-box;
+    width: 138px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--Cyan3);
+    background: var(--White);
+    box-shadow: 0px 2px 0px 0px rgba(67, 100, 131, 0.05);
+    color: var(--Cyan3);
+    text-align: center;
+    font-family: Gellix TRIAL;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background: rgba(67, 100, 131, 0.2);
+      border: 1px solid rgba(67, 100, 131, 0.2);
+    }
+
+    &:active {
+      transition-duration: 0.05s;
+      border: 1px solid #263d55;
+      background: rgba(38, 61, 85, 0.4);
+      box-shadow: 0px 2px 24px 0px rgba(59, 98, 120, 0.05);
+    }
+
+    &:disabled {
+      background-color: var(--Gray3);
+      box-shadow: 0px 2px 24px 0px rgba(59, 98, 120, 0.05);
+      border: 1px solid rgba(191, 191, 191, 0.2);
+    }
+
+    &:last-child {
+      background: var(--Cyan3);
+      border: 0;
+      box-shadow: 0px 2px 0px 0px rgba(67, 100, 131, 0.1);
+      color: var(--White);
+
+      &:hover {
+        background-color: #9eb2cb;
+      }
+
+      &:active {
+        transition-duration: 0.05s;
+        background-color: #263d55;
+      }
+    }
+  }
+}
