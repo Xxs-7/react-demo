@@ -1,0 +1,4 @@
+```shell
+pnpm add axios
+
+```

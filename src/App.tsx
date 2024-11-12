@@ -11,8 +11,8 @@ import React from "react";
 // import AnimateDemo from "./style/animation";
 // import SuggestionDemo from "./basic/suggestionInput/intputTipDemo";
 import AntdComponents from "./library/antd";
-import CssDemo from "./style/css";
-import LessDemo from "./style/less";
+// import CssDemo from "./style/css";
+// import LessDemo from "./style/less";
 import ScrollbarOverlay from "./myComponents/scrollbar/scrollbar-overlay/scrollbar";
 import MobileModalTipDemo from "./myComponents/modal/mobileBottomModal";
 import { BasicModalDemo } from "./myComponents/modal/basicModal";
@@ -20,11 +20,12 @@ import ModalDemo from "./myComponents/modal";
 import { Uploader } from "./myComponents/imageUpload";
 import ButtonUsage from "./library/mui/button";
 import ERPApp from "./app/shangguigu_antd";
-import HTML from "./html_css";
-import SpringDemo from "./animate/spring";
+// import SpringDemo from "./animate/spring";
 import BasicTDemo from "./myComponents/tooltip/basicT";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MyComponent from "./myComponents";
+import HTML from "./basic/html_css";
+import CssDemo from "./basic/style";
 
 // import SimplebarReactDemo from "./components/outer/simplebar-react/simplebar";
 // import Simplebar2Demo from "./components/outer/simplebar-basic/simplebar2";
@@ -74,8 +75,6 @@ export default function App() {
     //
     //
 
-    //   {/* animation */}
-    //   {/* <SpringDemo /> */}
     // </div>
     <BrowserRouter>
       <Routes>
@@ -91,6 +90,8 @@ export default function App() {
         <Route path='/MyComponent' element={<MyComponent />} />
         {/* application */}
         <Route path='/ERPApp/*' element={<ERPApp />} />
+
+        {/* <Route path='/animation' element={< />} /> */}
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,8 @@
+- [x] prettier
+- [x] eslint
+- [ ] jest
+- [x] react + ts
+- [ ] git husky
+- [ ] git commitlint
+- [ ] vite alias
+- [ ] ts alias
