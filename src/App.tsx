@@ -26,6 +26,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MyComponent from "./components/myComponents";
 import HTML from "./basic/html_css";
 import CssDemo from "./basic/style";
+import CardsCarousel from "./basic/style/animate/spring/cards-carousel";
 
 // import SimplebarReactDemo from "./components/outer/simplebar-react/simplebar";
 // import Simplebar2Demo from "./components/outer/simplebar-basic/simplebar2";
@@ -92,6 +93,9 @@ export default function App() {
         <Route path='/ERPApp/*' element={<ERPApp />} />
 
         {/* <Route path='/animation' element={< />} /> */}
+        <Route path='animated/spring/card' element={<CardsCarousel />} />
+
+        <Route path='*' element={<h1>404</h1>} />
       </Routes>
     </BrowserRouter>
   );
