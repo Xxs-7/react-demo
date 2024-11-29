@@ -28,6 +28,13 @@ import HTML from "./basic/html_css";
 import CssDemo from "./basic/style";
 import CardsCarousel from "./basic/style/animate/spring/cards-carousel";
 import SpringDemo from "./basic/style/animate/spring";
+import LexicalRichEditor from "./library/lexical";
+import LexicalEditorDemo1 from "./library/lexical/demo1";
+import FiberPage from "./React/fiberPage";
+import TicTacToe from "./React/tutorial/tic-tac-toe";
+import RefComp from "./React/tutorial/useRef";
+import ContextDemo from "./React/tutorial/useContext";
+import ScrollDemo from "./components/myComponents/scrollbar/scoll";
 
 // import SimplebarReactDemo from "./components/outer/simplebar-react/simplebar";
 // import Simplebar2Demo from "./components/outer/simplebar-basic/simplebar2";
@@ -85,8 +92,17 @@ export default function App() {
         {/* basic */}
         <Route path='/HTML' element={<HTML />} />
         <Route path='/CSS' element={<CssDemo />} />
+        <Route path='/component/scrollbar/scoll' element={<ScrollDemo />} />
+        <Route path='/component/scrollbar/overlayScrollbar' element={<ScrollbarOverlay />} />
         {/* library */}
         <Route path='/AntdComponents' element={<AntdComponents />} />
+
+        {/* react */}
+        <Route path='/react/tuturial/TicTacToe' element={<TicTacToe />} />
+        <Route path='/react/tuturial/useRef' element={<RefComp />} />
+        <Route path='/react/tuturial/useContext' element={<ContextDemo />} />
+
+        <Route path='/React/fiber' element={<FiberPage />} />
 
         {/* mycomponent */}
         <Route path='/MyComponent' element={<MyComponent />} />
@@ -95,6 +111,9 @@ export default function App() {
 
         <Route path='/animation/spring' element={<SpringDemo />} />
         <Route path='animated/spring/card' element={<CardsCarousel />} />
+
+        <Route path='/library/lexicaldemo1' element={<LexicalEditorDemo1 />} />
+        <Route path='/library/lexical' element={<LexicalRichEditor />} />
 
         <Route path='*' element={<h1>404</h1>} />
       </Routes>
