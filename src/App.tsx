@@ -38,6 +38,7 @@ import ScrollDemo from "./components/myComponents/scrollbar/scoll";
 import ReactQueryDemo from "./library/react-query";
 import UseEffectDemo from "./React/hooks/useEffect";
 import FormDemo from "./basic/html_css/form";
+import AhooksDemo from "./library/ahook";
 
 // import SimplebarReactDemo from "./components/outer/simplebar-react/simplebar";
 // import Simplebar2Demo from "./components/outer/simplebar-basic/simplebar2";
@@ -56,6 +57,8 @@ export default function App() {
 
     // library
     { path: "/AntdComponents", label: "Ant Design Components", component: <AntdComponents /> },
+
+    { path: "/Ahooks", label: "ahooks", component: <AhooksDemo /> },
 
     // react
     { path: "/react/tuturial/TicTacToe", label: "TicTacToe Tutorial", component: <TicTacToe /> },
@@ -103,7 +106,7 @@ export default function App() {
         <div className='w-full h-full p-2'>
           <Routes>
             {routes.map(({ path, component }) => {
-              return <Route path={path} element={component} />;
+              return <Route path={path} element={component} key={path} />;
             })}
           </Routes>
         </div>
