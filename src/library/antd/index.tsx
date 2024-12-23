@@ -11,6 +11,7 @@ import AnchorDemo from "./components/navigate/anchor";
 import SwitchDemo from "./components/form/switch";
 import MenuDemo from "./components/navigate/menu";
 import DatePickerDemo from "./components/datePicker";
+import SkeletonDemo from "./components/skeleton";
 
 export default function AntdComponents() {
   return (
@@ -33,6 +34,7 @@ export default function AntdComponents() {
 
         {/* other */}
         <DatePickerDemo />
+        <SkeletonDemo />
       </div>
     </ConfigProvider>
   );

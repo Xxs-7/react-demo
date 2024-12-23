@@ -35,7 +35,7 @@
       "@/*": ["src/*"],
       "react": ["node_modules/@types/react"]
     },
-    "types": ["vite-plugin-svgr/client"],
+    "types": ["vite-plugin-svgr/client", "vite/client"],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   },

@@ -1,0 +1,26 @@
+ul {
+  margin: 0 auto;
+  list-style: none;
+  /* border: 1px solid red; */
+  width: 40rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+li {
+  padding: 6px 0;
+  border-bottom: 1px dashed grey;
+  display: grid;
+  grid-template-columns: 3rem 12rem 12rem 10rem;
+  justify-items: start;
+}
+li:hover {
+  background-color: #9996;
+  cursor: pointer;
+}
+
+/* li > div {
+  border: 1px solid red;
+} */

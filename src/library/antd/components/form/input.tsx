@@ -1,6 +1,5 @@
-import { Input } from "antd";
-
 import React, { useState } from "react";
+import { Input } from "antd";
 
 const InputDemo1 = () => {
   const [userName, setUserName] = useState("");
@@ -13,9 +12,9 @@ const InputDemo1 = () => {
 
 const InputDemo = () => {
   return (
-    <>
+    <div>
       <InputDemo1 />
-    </>
+    </div>
   );
 };
 

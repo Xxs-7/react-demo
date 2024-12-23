@@ -22,7 +22,7 @@ import ButtonUsage from "./library/mui/button";
 import ERPApp from "./app/shangguigu_antd";
 // import SpringDemo from "./animate/spring";
 import BasicTDemo from "./components/myComponents/tooltip/basicT";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import MyComponent from "./components/myComponents";
 import HTML from "./basic/html_css";
 import CssDemo from "./basic/style";
@@ -35,88 +35,79 @@ import TicTacToe from "./React/tutorial/tic-tac-toe";
 import RefComp from "./React/tutorial/useRef";
 import ContextDemo from "./React/tutorial/useContext";
 import ScrollDemo from "./components/myComponents/scrollbar/scoll";
+import ReactQueryDemo from "./library/react-query";
+import UseEffectDemo from "./React/hooks/useEffect";
+import FormDemo from "./basic/html_css/form";
 
 // import SimplebarReactDemo from "./components/outer/simplebar-react/simplebar";
 // import Simplebar2Demo from "./components/outer/simplebar-basic/simplebar2";
 
 export default function App() {
+  const routes = [
+    { path: "/", label: "Home", component: <h1>Hello React</h1> },
+
+    // basic
+    { path: "/HTML", label: "HTML Demo", component: <HTML /> },
+    { path: "/Form", label: "Form Demo", component: <FormDemo /> },
+
+    { path: "/CSS", label: "CSS Demo", component: <CssDemo /> },
+    { path: "/component/scrollbar/scoll", label: "Scrollbar Demo", component: <ScrollDemo /> },
+    { path: "/component/scrollbar/overlayScrollbar", label: "Overlay Scrollbar", component: <ScrollbarOverlay /> },
+
+    // library
+    { path: "/AntdComponents", label: "Ant Design Components", component: <AntdComponents /> },
+
+    // react
+    { path: "/react/tuturial/TicTacToe", label: "TicTacToe Tutorial", component: <TicTacToe /> },
+    { path: "/react/tuturial/useRef", label: "useRef Tutorial", component: <RefComp /> },
+    { path: "/react/tuturial/useContext", label: "useContext Tutorial", component: <ContextDemo /> },
+    { path: "/React/fiber", label: "React Fiber", component: <FiberPage /> },
+    { path: "/React/useEffect", label: "useEffect Tutorial", component: <UseEffectDemo /> },
+
+    // mycomponent
+    { path: "/MyComponent", label: "My Custom Components", component: <MyComponent /> },
+
+    // application
+    { path: "/ERPApp/*", label: "ERP Application", component: <ERPApp /> },
+
+    // animation
+    { path: "/animation/spring", label: "Spring Animation", component: <SpringDemo /> },
+    { path: "/animated/spring/card", label: "Spring Card Animation", component: <CardsCarousel /> },
+
+    // library
+    { path: "/library/lexicaldemo1", label: "Lexical Demo 1", component: <LexicalEditorDemo1 /> },
+    { path: "/library/lexical", label: "Lexical Rich Editor", component: <LexicalRichEditor /> },
+
+    { path: "/library/react-query", label: "React Query", component: <ReactQueryDemo /> },
+    // 404
+    { path: "*", label: "404 - Not Found", component: <h1>404</h1> },
+  ];
+
+  const renderNav = () => {
+    return (
+      <>
+        {routes.map(({ path, label }) => {
+          return (
+            <Link to={path} key={path} className='p-1 flex rounded-lg text-nowrap'>
+              {label}
+            </Link>
+          );
+        })}
+      </>
+    );
+  };
   return (
-    // <div>
-    //   {/* basic */}
-    //   {/* <HTML /> */}
-    //   {/* <BasicComponent /> */}
-    //   {/* <RadixUIPage /> */}
-    //   {/* <ShadcnUi /> */}
-    //   {/* <TooltipDemo /> */}
-    //   {/* <CheckboxDemo /> */}
-    //   {/* <Layout /> */}
-    //   {/* <TwComponent /> */}
-    //   {/* <ReactTabelDemo /> */}
-    //   {/* <HeightDemo /> */}
-    //   {/* <AnimateDemo /> */}
-    //   {/* <SuggestionDemo /> */}
-    //   {/* <CssDemo/> */}
-    //   {/* <SimplebarReactDemo/> */}
-    //   {/* <Simplebar2Demo/> */}
-
-    //   {/* custome components */}
-    //   {/* <BasicTDemo /> */}
-
-    //   {/* style */}
-    //   {/*
-    //   <LessDemo /> */}
-    //   {/* <ScrollbarOverlay /> */}
-
-    //   {/* <MobileModalTipDemo /> */}
-    //   {/* <BasicModalDemo /> */}
-    //   {/* <ModalDemo /> */}
-    //   {/* <Uploader
-    //     needCrop
-    //     cropProps={{
-    //       aspectRatio: 1,
-    //     }}
-    //   /> */}
-    //   {/* <ButtonUsage /> */}
-    //   {/* <SvgDemo /> */}
-
-    //   {/* <AntdComponents /> */}
-
-    //
-    //
-
-    // </div>
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<h1>Hello React</h1>} />
-
-        {/* basic */}
-        <Route path='/HTML' element={<HTML />} />
-        <Route path='/CSS' element={<CssDemo />} />
-        <Route path='/component/scrollbar/scoll' element={<ScrollDemo />} />
-        <Route path='/component/scrollbar/overlayScrollbar' element={<ScrollbarOverlay />} />
-        {/* library */}
-        <Route path='/AntdComponents' element={<AntdComponents />} />
-
-        {/* react */}
-        <Route path='/react/tuturial/TicTacToe' element={<TicTacToe />} />
-        <Route path='/react/tuturial/useRef' element={<RefComp />} />
-        <Route path='/react/tuturial/useContext' element={<ContextDemo />} />
-
-        <Route path='/React/fiber' element={<FiberPage />} />
-
-        {/* mycomponent */}
-        <Route path='/MyComponent' element={<MyComponent />} />
-        {/* application */}
-        <Route path='/ERPApp/*' element={<ERPApp />} />
-
-        <Route path='/animation/spring' element={<SpringDemo />} />
-        <Route path='animated/spring/card' element={<CardsCarousel />} />
-
-        <Route path='/library/lexicaldemo1' element={<LexicalEditorDemo1 />} />
-        <Route path='/library/lexical' element={<LexicalRichEditor />} />
-
-        <Route path='*' element={<h1>404</h1>} />
-      </Routes>
+      <div className='h-screen w-full flex '>
+        <div className='p-2 flex flex-col border-r-2 border-gray-500'>{renderNav()}</div>
+        <div className='w-full h-full p-2'>
+          <Routes>
+            {routes.map(({ path, component }) => {
+              return <Route path={path} element={component} />;
+            })}
+          </Routes>
+        </div>
+      </div>
     </BrowserRouter>
   );
 }
